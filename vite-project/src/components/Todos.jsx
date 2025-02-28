@@ -1,11 +1,11 @@
 import React from 'react';
 import Todo from './Todo'; // Ensure you have this component
-
+import style from "./todos.module.css"
 const Todos = (props) => {
   console.log(props.todos);
 
   return (
-    <section>
+    <section className={style.todos}>
       {
         props.todos.map((todo) => (  // ✅ Corrected arrow function syntax
           <Todo todo={todo} key={todo.id} />
